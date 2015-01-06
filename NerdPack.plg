@@ -8,6 +8,7 @@
 	<!ENTITY repo      "https://raw.githubusercontent.com/&author;/unraid6-nerdpack/master">
 	<!ENTITY pluginURL "&repo;/&name;.plg">
 	<!ENTITY plugin    "/boot/config/plugins/&name;">
+	<!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
 ]>
 
 <PLUGIN  name="&name;"
@@ -26,6 +27,23 @@
  - lshw B.02.17
 </CHANGES>
 
+
+<FILE Name="&emhttp;/README.md">
+<INLINE>
+####NerdPack Tools####
+Extra packages, mostly CLI, for advanced users.  Use at your own risk.  Not supported officially by LimeTech.
+
+Contains:
+- iftop 1.0pre2
+- iotop 0.6
+- screen 4.2.1
+- lshw B.02.17
+</INLINE>
+</FILE>
+
+<FILE Name="&emhttp;/NerdPack.png">
+<URL>&repo;/NerdPack.png</URL>
+</FILE>
 
 <FILE Name="&plugin;/packages/iftop-1.0pre2-x86_64-1.txz" Run="/sbin/installpkg">
 <URL>&repo;/packages/iftop-1.0pre2-x86_64-1.txz</URL>
@@ -51,6 +69,7 @@
 <!-- PLUGIN REMOVAL SCRIPT -->
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
+rm -r /usr/local/emhttp/plugins/&name;
 rm -r &plugin;/packages
 </INLINE>
 </FILE>
