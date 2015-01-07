@@ -123,35 +123,35 @@ AFkGfVFb7jtXAAAAAElFTkSuQmCC
 </INLINE>
 </FILE>
 
-<FILE Name="&plugin;/packages/iftop-1.0pre2-x86_64-1.txz" Run="/sbin/installpkg">
+<FILE Name="&plugin;/packages/iftop-1.0pre2-x86_64-1.txz" Run="/sbin/installpkg --terse">
 <URL>&repo;/packages/iftop-1.0pre2-x86_64-1.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/iotop-0.6-x86_64-1_fs.tgz" Run="/sbin/installpkg">
+<FILE Name="&plugin;/packages/iotop-0.6-x86_64-1_fs.tgz" Run="/sbin/installpkg --terse">
 <URL>&repo;/packages/iotop-0.6-x86_64-1_fs.tgz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/lshw-B.02.17-x86_64-1_SBo_LT.txz" Run="/sbin/installpkg">
+<FILE Name="&plugin;/packages/lshw-B.02.17-x86_64-1_SBo_LT.txz" Run="/sbin/installpkg --terse">
 <URL>&repo;/packages/lshw-B.02.17-x86_64-1_SBo_LT.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/screen-4.2.1-x86_64-1.txz" Run="/sbin/installpkg">
+<FILE Name="&plugin;/packages/screen-4.2.1-x86_64-1.txz" Run="/sbin/installpkg --terse">
 <URL>&repo;/packages/screen-4.2.1-x86_64-1.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/utempter-1.1.5-x86_64-1.txz" Run="/sbin/installpkg">
+<FILE Name="&plugin;/packages/utempter-1.1.5-x86_64-1.txz" Run="/sbin/installpkg --terse">
 <URL>&repo;/packages/utempter-1.1.5-x86_64-1.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/kbd-1.15.3-x86_64-2.txz" Run="/sbin/installpkg">
+<FILE Name="&plugin;/packages/kbd-1.15.3-x86_64-2.txz" Run="/sbin/installpkg --terse">
 <URL>&repo;/packages/kbd-1.15.3-x86_64-2.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/inotify-tools-3.14-x86_64-1.txz" Run="/sbin/installpkg">
+<FILE Name="&plugin;/packages/inotify-tools-3.14-x86_64-1.txz" Run="/sbin/installpkg --terse">
 <URL>&repo;/packages/inotify-tools-3.14-x86_64-1.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/cpio-2.11-x86_64-2.txz" Run="/sbin/installpkg">
+<FILE Name="&plugin;/packages/cpio-2.11-x86_64-2.txz" Run="/sbin/installpkg --terse">
 <URL>&repo;/packages/cpio-2.11-x86_64-2.txz</URL>
 </FILE>
 
