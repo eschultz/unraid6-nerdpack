@@ -4,7 +4,7 @@
 <!DOCTYPE PLUGIN [
 	<!ENTITY name      "NerdPack">
 	<!ENTITY author    "eschultz">
-	<!ENTITY version   "2015.02.07">
+	<!ENTITY version   "2015.04.23">
 	<!ENTITY repo      "https://raw.githubusercontent.com/&author;/unraid6-nerdpack/master">
 	<!ENTITY pluginURL "&repo;/&name;.plg">
 	<!ENTITY plugin    "/boot/config/plugins/&name;">
@@ -19,10 +19,13 @@
 
 
 <CHANGES>
-###2015-02-07
+###2015.04.23
+- Added bwm-ng 0.6
+
+###2015.02.07
 - Added unrar 5.2.5
 
-###2015-01-06
+###2015.01.06
 - Inital release. includes:
  - iftop 1.0pre2
  - iotop 0.6
@@ -39,7 +42,7 @@
 ####Nerd Tools####
 Extra packages, mostly CLI, for advanced users.  Use at your own risk.  Not officially supported by LimeTech.
 
-Contains: iftop, iotop, screen, lshw, kbd, inotify-tools, cpio
+Contains: iftop, iotop, screen, lshw, kbd, inotify-tools, cpio, unrar, bwm-ng
 </INLINE>
 </FILE>
 
@@ -160,6 +163,10 @@ AFkGfVFb7jtXAAAAAElFTkSuQmCC
 
 <FILE Name="&plugin;/packages/unrar-5.2.5-x86_64-1_SBo.txz" Run="/sbin/installpkg --terse">
 <URL>&repo;/packages/unrar-5.2.5-x86_64-1_SBo.txz</URL>
+</FILE>
+
+<FILE Name="&plugin;/packages/bwm-ng-0.6-x86_64-1_SBo.txz" Run="/sbin/installpkg --terse">
+<URL>&repo;/packages/bwm-ng-0.6-x86_64-1_SBo.txz</URL>
 </FILE>
 
 
