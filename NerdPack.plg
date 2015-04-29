@@ -4,7 +4,7 @@
 <!DOCTYPE PLUGIN [
 	<!ENTITY name      "NerdPack">
 	<!ENTITY author    "eschultz">
-	<!ENTITY version   "2015.04.24">
+	<!ENTITY version   "2015.04.29">
 	<!ENTITY repo      "https://raw.githubusercontent.com/&author;/unraid6-nerdpack/master">
 	<!ENTITY pluginURL "&repo;/&name;.plg">
 	<!ENTITY plugin    "/boot/config/plugins/&name;">
@@ -19,6 +19,9 @@
 
 
 <CHANGES>
+###2015.04.29
+- Added git 2.3.5
+
 ###2015.04.24
 - Added strace 4.10
 
@@ -176,6 +179,9 @@ AFkGfVFb7jtXAAAAAElFTkSuQmCC
 <URL>&repo;/packages/strace-4.10-x86_64-1.txz</URL>
 </FILE>
 
+<FILE Name="&plugin;/packages/git-2.3.5-x86_64-1.txz" Run="/sbin/installpkg --terse">
+<URL>&repo;/packages/git-2.3.5-x86_64-1.txz</URL>
+</FILE>
 
 <!-- PLUGIN REMOVAL SCRIPT -->
 <FILE Run="/bin/bash" Method="remove">
