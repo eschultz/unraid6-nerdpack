@@ -4,7 +4,7 @@
 <!DOCTYPE PLUGIN [
 	<!ENTITY name      "NerdPack">
 	<!ENTITY author    "eschultz">
-	<!ENTITY version   "2015.04.29">
+	<!ENTITY version   "2015.05.15">
 	<!ENTITY repo      "https://raw.githubusercontent.com/&author;/unraid6-nerdpack/master">
 	<!ENTITY pluginURL "&repo;/&name;.plg">
 	<!ENTITY plugin    "/boot/config/plugins/&name;">
@@ -19,6 +19,11 @@
 
 
 <CHANGES>
+###2015.05.15
+- Added lftp 4.6.1
+- Replaced installpkg with upgradepkg to allow package upgrading
+- Added removal of packages upon uninstall of &name;
+
 ###2015.04.29
 - Added git 2.3.5
 
@@ -48,7 +53,7 @@
 ####Nerd Tools####
 Extra packages, mostly CLI, for advanced users.  Use at your own risk.  Not officially supported by LimeTech.
 
-Contains: iftop, iotop, screen, lshw, kbd, inotify-tools, cpio, unrar, bwm-ng, strace, git
+Contains: iftop, iotop, screen, lshw, kbd, inotify-tools, cpio, unrar, bwm-ng, strace, git, lftp
 </INLINE>
 </FILE>
 
@@ -135,59 +140,84 @@ AFkGfVFb7jtXAAAAAElFTkSuQmCC
 </INLINE>
 </FILE>
 
-<FILE Name="&plugin;/packages/iftop-1.0pre2-x86_64-1.txz" Run="/sbin/installpkg --terse">
+<FILE Name="&plugin;/packages/iftop-1.0pre2-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/iftop-1.0pre2-x86_64-1.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/iotop-0.6-x86_64-1_fs.tgz" Run="/sbin/installpkg --terse">
+<FILE Name="&plugin;/packages/iotop-0.6-x86_64-1_fs.tgz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/iotop-0.6-x86_64-1_fs.tgz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/lshw-B.02.17-x86_64-1_SBo_LT.txz" Run="/sbin/installpkg --terse">
+<FILE Name="&plugin;/packages/lshw-B.02.17-x86_64-1_SBo_LT.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/lshw-B.02.17-x86_64-1_SBo_LT.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/screen-4.2.1-x86_64-1.txz" Run="/sbin/installpkg --terse">
+<FILE Name="&plugin;/packages/screen-4.2.1-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/screen-4.2.1-x86_64-1.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/utempter-1.1.5-x86_64-1.txz" Run="/sbin/installpkg --terse">
+<FILE Name="&plugin;/packages/utempter-1.1.5-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/utempter-1.1.5-x86_64-1.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/kbd-1.15.3-x86_64-2.txz" Run="/sbin/installpkg --terse">
+<FILE Name="&plugin;/packages/kbd-1.15.3-x86_64-2.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/kbd-1.15.3-x86_64-2.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/inotify-tools-3.14-x86_64-1.txz" Run="/sbin/installpkg --terse">
+<FILE Name="&plugin;/packages/inotify-tools-3.14-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/inotify-tools-3.14-x86_64-1.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/cpio-2.11-x86_64-2.txz" Run="/sbin/installpkg --terse">
+<FILE Name="&plugin;/packages/cpio-2.11-x86_64-2.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/cpio-2.11-x86_64-2.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/unrar-5.2.5-x86_64-1_SBo.txz" Run="/sbin/installpkg --terse">
+<FILE Name="&plugin;/packages/unrar-5.2.5-x86_64-1_SBo.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/unrar-5.2.5-x86_64-1_SBo.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/bwm-ng-0.6-x86_64-1_SBo.txz" Run="/sbin/installpkg --terse">
+<FILE Name="&plugin;/packages/bwm-ng-0.6-x86_64-1_SBo.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/bwm-ng-0.6-x86_64-1_SBo.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/strace-4.10-x86_64-1.txz" Run="/sbin/installpkg --terse">
+<FILE Name="&plugin;/packages/strace-4.10-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/strace-4.10-x86_64-1.txz</URL>
 </FILE>
 
-<FILE Name="&plugin;/packages/git-2.3.5-x86_64-1.txz" Run="/sbin/installpkg --terse">
+<FILE Name="&plugin;/packages/git-2.3.5-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/git-2.3.5-x86_64-1.txz</URL>
+</FILE>
+
+<FILE Name="&plugin;/packages/readline-6.3-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
+<URL>&repo;/packages/readline-6.3-x86_64-1.txz</URL>
+</FILE>
+
+<FILE Name="&plugin;/packages/lftp-4.6.1-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
+<URL>&repo;/packages/lftp-4.6.1-x86_64-1.txz</URL>
 </FILE>
 
 <!-- PLUGIN REMOVAL SCRIPT -->
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
-rm -r /usr/local/emhttp/plugins/&name;
-rm -r &plugin;/packages
+# Remove plugin related files
+rm -rf /usr/local/emhttp/plugins/&name;
+rm -rf &plugin;/packages
+
+# Uninstall packages
+removepkg iftop
+removepkg iotop
+removepkg lshw
+removepkg screen
+removepkg utempter
+removepkg kbd
+removepkg inotify-tools
+removepkg cpio
+removepkg unrar
+removepkg bwm-ng
+removepkg strace
+removepkg git
+removepkg readline
+removepkg lftp
 </INLINE>
 </FILE>
 </PLUGIN>
