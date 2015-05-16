@@ -4,7 +4,7 @@
 <!DOCTYPE PLUGIN [
 	<!ENTITY name      "NerdPack">
 	<!ENTITY author    "eschultz">
-	<!ENTITY version   "2015.05.15">
+	<!ENTITY version   "2015.05.16">
 	<!ENTITY repo      "https://raw.githubusercontent.com/&author;/unraid6-nerdpack/master">
 	<!ENTITY pluginURL "&repo;/&name;.plg">
 	<!ENTITY plugin    "/boot/config/plugins/&name;">
@@ -19,6 +19,10 @@
 
 
 <CHANGES>
+###2015.05.16
+- Added subversion 1.7.16
+- Added MD5 checks for all packages
+
 ###2015.05.15
 - Added lftp 4.6.1
 - Replaced installpkg with upgradepkg to allow package upgrading
@@ -54,7 +58,7 @@
 
 Extra packages, mostly CLI, for advanced users.  Use at your own risk.  Not officially supported by LimeTech.
 
-Contains: iftop, iotop, screen, lshw, kbd, inotify-tools, cpio, unrar, bwm-ng, strace, git, lftp
+Contains: iftop, iotop, screen, lshw, kbd, inotify-tools, cpio, unrar, bwm-ng, strace, git, lftp, subversion
 </INLINE>
 </FILE>
 
@@ -211,6 +215,26 @@ AFkGfVFb7jtXAAAAAElFTkSuQmCC
 <MD5>3be40d3a0ed1ef953ea5ddfec97f85f5</MD5>
 </FILE>
 
+<FILE Name="&plugin;/packages/apr-1.5.0-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
+<URL>&repo;/packages/apr-1.5.0-x86_64-1.txz</URL>
+<MD5>b29b3968db9ef08ab3d66edc78cd938f</MD5>
+</FILE>
+
+<FILE Name="&plugin;/packages/apr-util-1.5.3-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
+<URL>&repo;/packages/apr-util-1.5.3-x86_64-1.txz</URL>
+<MD5>12edb0ebe231bca9ff1b17c8f29db43e</MD5>
+</FILE>
+
+<FILE Name="&plugin;/packages/neon-0.29.6-x86_64-2.txz" Run="/sbin/upgradepkg --install-new">
+<URL>&repo;/packages/neon-0.29.6-x86_64-2.txz</URL>
+<MD5>c0c54620ef3fb4aacb7671ddc259cffd</MD5>
+</FILE>
+
+<FILE Name="&plugin;/packages/subversion-1.7.16-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
+<URL>&repo;/packages/subversion-1.7.16-x86_64-1.txz</URL>
+<MD5>acdcd32e29e311059e8f2f1e383bf35b</MD5>
+</FILE>
+
 <!-- PLUGIN REMOVAL SCRIPT -->
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
@@ -233,6 +257,10 @@ removepkg strace
 removepkg git
 removepkg readline
 removepkg lftp
+removepkg apr
+removepkg apr-util
+removepkg neon
+removepkg subversion
 </INLINE>
 </FILE>
 </PLUGIN>
