@@ -50,7 +50,8 @@
 
 <FILE Name="&emhttp;/README.md">
 <INLINE>
-####Nerd Tools####
+**Nerd Tools**
+
 Extra packages, mostly CLI, for advanced users.  Use at your own risk.  Not officially supported by LimeTech.
 
 Contains: iftop, iotop, screen, lshw, kbd, inotify-tools, cpio, unrar, bwm-ng, strace, git, lftp
@@ -142,58 +143,72 @@ AFkGfVFb7jtXAAAAAElFTkSuQmCC
 
 <FILE Name="&plugin;/packages/iftop-1.0pre2-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/iftop-1.0pre2-x86_64-1.txz</URL>
+<MD5>393906def7e0614b6ed5278966b21b23</MD5>
 </FILE>
 
 <FILE Name="&plugin;/packages/iotop-0.6-x86_64-1_fs.tgz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/iotop-0.6-x86_64-1_fs.tgz</URL>
+<MD5>236cd86551c5d425b3648c858edce037</MD5>
 </FILE>
 
 <FILE Name="&plugin;/packages/lshw-B.02.17-x86_64-1_SBo_LT.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/lshw-B.02.17-x86_64-1_SBo_LT.txz</URL>
+<MD5>9e5c9d5f971aec83de870805d764bc0d</MD5>
 </FILE>
 
 <FILE Name="&plugin;/packages/screen-4.2.1-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/screen-4.2.1-x86_64-1.txz</URL>
+<MD5>debab6302a174da4a69f0700ba3f9c7a</MD5>
 </FILE>
 
 <FILE Name="&plugin;/packages/utempter-1.1.5-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/utempter-1.1.5-x86_64-1.txz</URL>
+<MD5>dbbe884ebb29b830e4032cc41c3f679a</MD5>
 </FILE>
 
 <FILE Name="&plugin;/packages/kbd-1.15.3-x86_64-2.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/kbd-1.15.3-x86_64-2.txz</URL>
+<MD5>25e5bf5c0a62234106eb16b49772086f</MD5>
 </FILE>
 
 <FILE Name="&plugin;/packages/inotify-tools-3.14-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/inotify-tools-3.14-x86_64-1.txz</URL>
+<MD5>54d5c31bd9b6ed66b5535a5256ef094c</MD5>
 </FILE>
 
 <FILE Name="&plugin;/packages/cpio-2.11-x86_64-2.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/cpio-2.11-x86_64-2.txz</URL>
+<MD5>5d1f594363e10b1b7fc5b7e762a01f5e</MD5>
 </FILE>
 
 <FILE Name="&plugin;/packages/unrar-5.2.5-x86_64-1_SBo.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/unrar-5.2.5-x86_64-1_SBo.txz</URL>
+<MD5>48240a8db918d2f2c9d5b1369a171898</MD5>
 </FILE>
 
 <FILE Name="&plugin;/packages/bwm-ng-0.6-x86_64-1_SBo.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/bwm-ng-0.6-x86_64-1_SBo.txz</URL>
+<MD5>b3665a1623044e455624623ab1d61c9f</MD5>
 </FILE>
 
 <FILE Name="&plugin;/packages/strace-4.10-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/strace-4.10-x86_64-1.txz</URL>
+<MD5>fdd458a6973cf44ecaaa0a7ab5f6bef7</MD5>
 </FILE>
 
 <FILE Name="&plugin;/packages/git-2.3.5-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/git-2.3.5-x86_64-1.txz</URL>
+<MD5>73d50f4ed76f02babb118442d7a2a030</MD5>
 </FILE>
 
 <FILE Name="&plugin;/packages/readline-6.3-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/readline-6.3-x86_64-1.txz</URL>
+<MD5>c8346c834f3617141a669884f53d41f9</MD5>
 </FILE>
 
 <FILE Name="&plugin;/packages/lftp-4.6.1-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
 <URL>&repo;/packages/lftp-4.6.1-x86_64-1.txz</URL>
+<MD5>3be40d3a0ed1ef953ea5ddfec97f85f5</MD5>
 </FILE>
 
 <!-- PLUGIN REMOVAL SCRIPT -->
