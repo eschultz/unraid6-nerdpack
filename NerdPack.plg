@@ -4,7 +4,7 @@
 <!DOCTYPE PLUGIN [
 	<!ENTITY name      "NerdPack">
 	<!ENTITY author    "eschultz">
-	<!ENTITY version   "2015.05.16">
+	<!ENTITY version   "2015.06.23">
 	<!ENTITY repo      "https://raw.githubusercontent.com/&author;/unraid6-nerdpack/master">
 	<!ENTITY pluginURL "&repo;/&name;.plg">
 	<!ENTITY plugin    "/boot/config/plugins/&name;">
@@ -19,6 +19,9 @@
 
 
 <CHANGES>
+###2015.06.23
+- Added python 2.7.9 (fixes iotop dependency)
+
 ###2015.05.16
 - Added subversion 1.7.16
 - Added MD5 checks for all packages
@@ -58,7 +61,7 @@
 
 Extra packages, mostly CLI, for advanced users.  Use at your own risk.  Not officially supported by LimeTech.
 
-Contains: iftop, iotop, screen, lshw, kbd, inotify-tools, cpio, unrar, bwm-ng, strace, git, lftp, subversion
+Contains: iftop, iotop, screen, lshw, kbd, inotify-tools, cpio, unrar, bwm-ng, strace, git, lftp, subversion, python
 </INLINE>
 </FILE>
 
@@ -235,6 +238,11 @@ AFkGfVFb7jtXAAAAAElFTkSuQmCC
 <MD5>acdcd32e29e311059e8f2f1e383bf35b</MD5>
 </FILE>
 
+<FILE Name="&plugin;/packages/python-2.7.9-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
+<URL>&repo;/packages/python-2.7.9-x86_64-1.txz</URL>
+<MD5>7d5f6d12757c59e5f08ca25bd63aab78</MD5>
+</FILE>
+
 <!-- PLUGIN REMOVAL SCRIPT -->
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
@@ -243,24 +251,25 @@ rm -rf /usr/local/emhttp/plugins/&name;
 rm -rf &plugin;/packages
 
 # Uninstall packages
-removepkg iftop
-removepkg iotop
-removepkg lshw
-removepkg screen
-removepkg utempter
-removepkg kbd
-removepkg inotify-tools
-removepkg cpio
-removepkg unrar
-removepkg bwm-ng
-removepkg strace
-removepkg git
-removepkg readline
-removepkg lftp
-removepkg apr
-removepkg apr-util
-removepkg neon
-removepkg subversion
+removepkg iftop-1.0pre2-x86_64-1
+removepkg iotop-0.6-x86_64-1_fs
+removepkg lshw-B.02.17-x86_64-1_SBo_LT
+removepkg screen-4.2.1-x86_64-1
+removepkg utempter-1.1.5-x86_64-1
+removepkg kbd-1.15.3-x86_64-2
+removepkg inotify-tools-3.14-x86_64-1
+removepkg cpio-2.11-x86_64-2
+removepkg unrar-5.2.5-x86_64-1_SBo
+removepkg bwm-ng-0.6-x86_64-1_SBo
+removepkg strace-4.10-x86_64-1
+removepkg git-2.3.5-x86_64-1
+removepkg readline-6.3-x86_64-1
+removepkg lftp-4.6.1-x86_64-1
+removepkg apr-1.5.0-x86_64-1
+removepkg apr-util-1.5.3-x86_64-1
+removepkg neon-0.29.6-x86_64-2
+removepkg subversion-1.7.16-x86_64-1
+removepkg python-2.7.9-x86_64-1
 </INLINE>
 </FILE>
 </PLUGIN>
