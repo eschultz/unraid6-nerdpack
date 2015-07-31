@@ -4,7 +4,7 @@
 <!DOCTYPE PLUGIN [
 	<!ENTITY name      "NerdPack">
 	<!ENTITY author    "eschultz">
-	<!ENTITY version   "2015.06.27">
+	<!ENTITY version   "2015.07.31">
 	<!ENTITY repo      "https://raw.githubusercontent.com/&author;/unraid6-nerdpack/master">
 	<!ENTITY pluginURL "&repo;/&name;.plg">
 	<!ENTITY plugin    "/boot/config/plugins/&name;">
@@ -19,6 +19,9 @@
 
 
 <CHANGES>
+###2015.07.31
+- Added iperf 3.0.11
+
 ###2015.06.27
 - Added sshfs 2.5
 
@@ -251,6 +254,11 @@ AFkGfVFb7jtXAAAAAElFTkSuQmCC
 <MD5>1e3fefedaf7b452aa22935682d969fcd</MD5>
 </FILE>
 
+<FILE Name="&plugin;/packages/iperf-3.0.11-x86_64-1_SBo.txz" Run="/sbin/upgradepkg --install-new">
+<URL>&repo;/packages/iperf-3.0.11-x86_64-1_SBo.txz</URL>
+<MD5>703cc9b429fb43dfbf87e7a3c17f48b3</MD5>
+</FILE>
+
 <!-- PLUGIN REMOVAL SCRIPT -->
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
@@ -279,6 +287,7 @@ removepkg neon-0.29.6-x86_64-2
 removepkg subversion-1.7.16-x86_64-1
 removepkg python-2.7.9-x86_64-1
 removepkg sshfs-fuse-2.5-x86_64-1sl
+removepkg iperf-3.0.11-x86_64-1_SBo
 </INLINE>
 </FILE>
 </PLUGIN>
