@@ -4,7 +4,7 @@
 <!DOCTYPE PLUGIN [
 	<!ENTITY name      "NerdPack">
 	<!ENTITY author    "eschultz">
-	<!ENTITY version   "2015.07.31">
+	<!ENTITY version   "2015.08.09">
 	<!ENTITY repo      "https://raw.githubusercontent.com/&author;/unraid6-nerdpack/master">
 	<!ENTITY pluginURL "&repo;/&name;.plg">
 	<!ENTITY plugin    "/boot/config/plugins/&name;">
@@ -19,6 +19,9 @@
 
 
 <CHANGES>
+###2015.08.09
+- Added p7zip 9.38.1
+
 ###2015.07.31
 - Added iperf 3.0.11
 
@@ -67,7 +70,7 @@
 
 Extra packages, mostly CLI, for advanced users.  Use at your own risk.  Not officially supported by LimeTech.
 
-Contains: iftop, iotop, screen, lshw, kbd, inotify-tools, cpio, unrar, bwm-ng, strace, git, lftp, subversion, python, sshfs, iperf
+Contains: iftop, iotop, screen, lshw, kbd, inotify-tools, cpio, unrar, bwm-ng, strace, git, lftp, subversion, python, sshfs, iperf, p7zip
 </INLINE>
 </FILE>
 
@@ -259,6 +262,11 @@ AFkGfVFb7jtXAAAAAElFTkSuQmCC
 <MD5>703cc9b429fb43dfbf87e7a3c17f48b3</MD5>
 </FILE>
 
+<FILE Name="&plugin;/packages/p7zip-9.38.1-x86_64-1tom.txz" Run="/sbin/upgradepkg --install-new">
+<URL>&repo;/packages/p7zip-9.38.1-x86_64-1tom.txz</URL>
+<MD5>76201c55651f17c3ae328072ff07d377</MD5>
+</FILE>
+
 <!-- PLUGIN REMOVAL SCRIPT -->
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
@@ -288,6 +296,7 @@ removepkg subversion-1.7.16-x86_64-1
 removepkg python-2.7.9-x86_64-1
 removepkg sshfs-fuse-2.5-x86_64-1sl
 removepkg iperf-3.0.11-x86_64-1_SBo
+removepkg p7zip-9.38.1-x86_64-1tom
 </INLINE>
 </FILE>
 </PLUGIN>
