@@ -19,6 +19,10 @@
 
 
 <CHANGES>
+###2015.12.06
+- Added perl-5.22.0
+- Added vim-7.4.898 
+
 ###2015.09.09
 - Keep all packages installed after NerdPack uninstall so we don't break other plugin's dependancies. (thanks David Coppit)
 
@@ -73,7 +77,7 @@
 
 Extra packages, mostly CLI, for advanced users.  Use at your own risk.  Not officially supported by LimeTech.
 
-Contains: iftop, iotop, screen, lshw, kbd, inotify-tools, cpio, unrar, bwm-ng, strace, git, lftp, subversion, python, sshfs, iperf, p7zip
+Contains: iftop, iotop, screen, lshw, kbd, inotify-tools, cpio, unrar, bwm-ng, strace, git, lftp, subversion, python, sshfs, iperf, p7zip, perl, vim
 </INLINE>
 </FILE>
 
@@ -269,6 +273,17 @@ AFkGfVFb7jtXAAAAAElFTkSuQmCC
 <URL>&repo;/packages/p7zip-9.38.1-x86_64-1tom.txz</URL>
 <MD5>76201c55651f17c3ae328072ff07d377</MD5>
 </FILE>
+
+<FILE Name="&plugin;/packages/p7zip-9.38.1-x86_64-1tom.txz" Run="/sbin/upgradepkg --install-new">
+<URL>&repo;/packages/p7zip-9.38.1-x86_64-1tom.txz</URL>
+<MD5>afc5fdffbf1959933dd8ba1e90ae1564</MD5>
+</FILE>
+
+<FILE Name="&plugin;/packages/vim-7.4.898-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
+<URL>&repo;/packages/vim-7.4.898-x86_64-1.txz</URL>
+<MD5>aaf8ab5cb6b14b29d3ebc8cbb7fa4d29</MD5>
+</FILE>
+
 
 <!-- PLUGIN REMOVAL SCRIPT -->
 <FILE Run="/bin/bash" Method="remove">
