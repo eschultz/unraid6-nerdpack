@@ -4,7 +4,7 @@
 <!DOCTYPE PLUGIN [
 	<!ENTITY name      "NerdPack">
 	<!ENTITY author    "eschultz">
-	<!ENTITY version   "2015.09.09">
+	<!ENTITY version   "2015.12.07">
 	<!ENTITY repo      "https://raw.githubusercontent.com/&author;/unraid6-nerdpack/master">
 	<!ENTITY pluginURL "&repo;/&name;.plg">
 	<!ENTITY plugin    "/boot/config/plugins/&name;">
@@ -19,9 +19,9 @@
 
 
 <CHANGES>
-###2015.12.06
-- Added perl-5.22.0
-- Added vim-7.4.898 
+###2015.12.07
+- Added perl 5.22.0
+- Added vim 7.4.898 (thanks Ryan Detzel)
 
 ###2015.09.09
 - Keep all packages installed after NerdPack uninstall so we don't break other plugin's dependancies. (thanks David Coppit)
@@ -274,8 +274,8 @@ AFkGfVFb7jtXAAAAAElFTkSuQmCC
 <MD5>76201c55651f17c3ae328072ff07d377</MD5>
 </FILE>
 
-<FILE Name="&plugin;/packages/p7zip-9.38.1-x86_64-1tom.txz" Run="/sbin/upgradepkg --install-new">
-<URL>&repo;/packages/p7zip-9.38.1-x86_64-1tom.txz</URL>
+<FILE Name="&plugin;/packages/perl-5.22.0-x86_64-1.txz" Run="/sbin/upgradepkg --install-new">
+<URL>&repo;/packages/perl-5.22.0-x86_64-1.txz</URL>
 <MD5>afc5fdffbf1959933dd8ba1e90ae1564</MD5>
 </FILE>
 
