@@ -4,9 +4,9 @@
 <!DOCTYPE PLUGIN [
 	<!ENTITY name      "NerdPack">
 	<!ENTITY author    "eschultz">
-	<!ENTITY version   "2015.12.07">
+	<!ENTITY version   "2016.02.01">
 	<!ENTITY repo      "https://raw.githubusercontent.com/&author;/unraid6-nerdpack/master">
-	<!ENTITY pluginURL "&repo;/&name;.plg">
+	<!ENTITY pluginURL "https://raw.githubusercontent.com/dmacias72/unRAID-plugins/master/plugins/NerdPack.plg">
 	<!ENTITY plugin    "/boot/config/plugins/&name;">
 	<!ENTITY emhttp    "/usr/local/emhttp/plugins/&name;">
 ]>
@@ -19,6 +19,9 @@
 
 
 <CHANGES>
+###2016.02.01
+- Migrated repo over to dmacias.  The next update will use a web ui control to selectively install/manage Nerd Pack packages.
+
 ###2015.12.07
 - Added perl 5.22.0
 - Added vim 7.4.898 (thanks Ryan Detzel)
